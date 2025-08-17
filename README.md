@@ -1,5 +1,9 @@
+<div align="center">
+
 Synapse Search 🧠✨
 Search Smarter, Not Harder. Your Intelligent Gateway to the Web's Knowledge.
+</div>
+
 Welcome to Synapse Search! This isn't just another search engine. It's a smart research assistant I built to cut through the noise of the internet. Instead of giving you a list of links to dig through, Synapse Search reads them for you and provides a clear, comprehensive summary powered by Google's Gemini AI.
 
 This project is a key part of my personal portfolio, showcasing a full-stack application built with Java and Spring Boot.
@@ -129,4 +133,8 @@ Run the application using the Gradle wrapper:
 
 The application will start, and the necessary database tables will be created automatically. You can access it at http://localhost:8080.
 
-A Project by h7.
+<div align="center">
+
+A Project by h7
+
+</div>
