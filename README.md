@@ -1,142 +1,138 @@
-<p align="center">
-<strong>
-<font size="6">Synapse Search 🧠✨</font>
-</strong>
-</p>
+<div align="center">
 
-<p align="center">
-<strong>Search Smarter, Not Harder. Your Intelligent Gateway to the Web's Knowledge.</strong>
-</p>
+# Synapse Search 🧠✨
 
-Welcome to Synapse Search! This isn't just another search engine. It's a smart research assistant I built to cut through the noise of the internet. Instead of giving you a list of links to dig through, Synapse Search reads them for you and provides a clear, comprehensive summary powered by Google's Gemini AI.
+**Search Smarter, Not Harder. Your Intelligent Gateway to the Web's Knowledge.**
 
-This project is a key part of my personal portfolio, showcasing a full-stack application built with Java and Spring Boot.
+[![Java](https://img.shields.io/badge/Java-17-orange?logo=java\&logoColor=white)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?logo=springboot)](https://spring.io/projects/spring-boot)
+[![MySQL](https://img.shields.io/badge/MySQL-Database-blue?logo=mysql\&logoColor=white)](https://www.mysql.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-success.svg)](../../issues)
 
-✨ Key Features
-🧠 AI-Powered Summaries: Get intelligent, easy-to-understand answers instead of just links.
+</div>
 
-🔍 Real-Time Web Search: All answers are based on the most current information available on the web, thanks to the Google Search API.
+---
 
-💡 Smart Suggestions: As you type, get instant suggestions to complete your thoughts, just like in Google.
+## 🌟 Introduction
 
-🌐 Show Your Sources: See the exact web pages the AI used to create its summary, ensuring transparency and trust.
+Welcome to **Synapse Search**!
+This isn't just another search engine — it's a **smart research assistant** I built to cut through the noise of the internet.
 
-❓ Follow-Up Questions: Discover new avenues of inquiry with AI-suggested related questions.
+Instead of dumping a list of links, Synapse Search **reads them for you** and provides a concise **summary powered by Google’s Gemini AI**.
 
-🗣️ Multi-Language Support: Translate any AI-generated summary into Sinhala or Tamil with a single click.
+This project is also a highlight of my **personal portfolio**, showcasing a full-stack application built with **Java & Spring Boot**.
 
-🔒 Secure Google Login: Your data is safe with secure authentication via Google OAuth2.
+---
 
-📖 Search History: Keep track of your past searches and revisit them anytime.
+## 🚀 Key Features
 
-👤 Full Account Management: Clear your history or delete your account with ease.
+* **🧠 AI-Powered Summaries** → Clear, easy-to-understand answers instead of just links.
+* **🔍 Real-Time Web Search** → Always up-to-date results with Google Search API.
+* **💡 Smart Suggestions** → Autocomplete-like query suggestions.
+* **🌐 Transparent Sources** → See exactly which sites were used.
+* **❓ Follow-Up Questions** → Get AI-suggested related queries.
+* **🗣️ Multi-Language Support** → Instantly translate summaries into **Sinhala** or **Tamil**.
+* **🔒 Secure Google Login** → Authentication powered by Google OAuth2.
+* **📖 Search History** → Review and revisit past searches.
+* **👤 Account Management** → Delete history or remove account easily.
 
-🛠️ Technology Stack
-Component
+---
 
-Technology Used
+## 🛠️ Tech Stack
 
-Backend
+| **Component**   | **Technology Used**                                        |
+| --------------- | ---------------------------------------------------------- |
+| **Backend**     | Java 17, Spring Boot 3.x                                   |
+| **Database**    | MySQL                                                      |
+| **Security**    | Spring Security (Google OAuth2)                            |
+| **Build Tool**  | Gradle                                                     |
+| **Frontend**    | HTML, CSS, Vanilla JavaScript, Thymeleaf                   |
+| **AI & Search** | Google Gemini API, Google Custom Search API                |
+| **Key Deps**    | spring-data-jpa, spring-security, mysql-connector-j, jsoup |
 
-Java 17, Spring Boot 3.x
+---
 
-Database
+## ⚙️ Getting Started
 
-MySQL
+Follow these steps to run **Synapse Search** locally.
 
-Security
+### ✅ Prerequisites
 
-Spring Security (Google OAuth2)
+* JDK **17+**
+* Gradle **7.0+**
+* MySQL Server (XAMPP/WAMP/Standalone)
 
-Build Tool
+---
 
-Gradle
+### 🔧 Installation & Setup
 
-Frontend
+1. **Clone the Repository**
 
-HTML, CSS, Vanilla JavaScript, Thymeleaf
+   ```sh
+   git clone https://github.com/hashan-7/ai-search-app.git
+   cd ai-search-app
+   ```
 
-AI & Search
+2. **Database Setup**
 
-Google Gemini API, Google Custom Search API
+   ```sql
+   CREATE DATABASE ai_search;
+   ```
 
-Key Deps
+3. **Configure `application.properties`**
+   ⚠️ This file is excluded via `.gitignore` to protect secrets. Create it manually at
+   `src/main/resources/application.properties`:
 
-spring-data-jpa, spring-security, mysql-connector-j, jsoup
+   ```properties
+   # Server Port
+   server.port=8080
 
-🚀 Getting Started
-To get a local copy up and running, follow these simple steps.
+   # Google OAuth2 Login
+   spring.security.oauth2.client.registration.google.client-id=YOUR_GOOGLE_CLIENT_ID
+   spring.security.oauth2.client.registration.google.client-secret=YOUR_GOOGLE_CLIENT_SECRET
+   spring.security.oauth2.client.registration.google.scope=openid,profile,email
 
-Prerequisites
-JDK 17 or later
+   # API Keys
+   google.search.api.key=YOUR_GOOGLE_API_KEY
+   google.search.engine.id=YOUR_SEARCH_ENGINE_ID
+   gemini.api.key=YOUR_GEMINI_API_KEY
 
-Gradle 7.0 or later
+   # Database
+   spring.datasource.url=jdbc:mysql://localhost:3306/ai_search?createDatabaseIfNotExist=true
+   spring.datasource.username=root
+   spring.datasource.password=your_mysql_password
 
-MySQL Server (e.g., via XAMPP, WAMP, or standalone installation)
+   # Hibernate
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+   spring.jpa.show-sql=true
+   ```
 
-Installation & Setup
-Clone the repository:
+4. **Build & Run**
 
-git clone https://github.com/venushathi/ai-search-app.git
-cd ai-search-app
+   ```sh
+   ./gradlew bootRun
+   ```
 
-Database Setup:
+   App will be available at 👉 [http://localhost:8080](http://localhost:8080)
 
-Ensure your MySQL server is running.
+---
 
-Open a MySQL client (like phpMyAdmin, MySQL Workbench, or the command line).
+## 🤝 Contributing
 
-Create a new, empty database. You can name it ai_search.
+Contributions, feature requests, and bug reports are always welcome!
+Check out the issues page: `https://github.com/hashan-7/ai-search-app/issues`.
 
-CREATE DATABASE ai_search;
+---
 
-Configure application.properties:
+## 📄 License
 
-⚠️ Important: This file is intentionally excluded from the repository via .gitignore to protect your secret keys. You must create it manually.
+This project is licensed under the **MIT License**.
+See the `LICENSE` file for details.
 
-In the project, navigate to src/main/resources/.
+---
 
-Create a new file named application.properties.
-
-Copy the content below into your new file and update the placeholder values for your local environment.
-
-# Server Port
-server.port=8080
-
-# Google OAuth2 Login Configuration
-# Replace with your own credentials from Google Cloud Console
-spring.security.oauth2.client.registration.google.client-id=YOUR_GOOGLE_CLIENT_ID_HERE
-spring.security.oauth2.client.registration.google.client-secret=YOUR_GOOGLE_CLIENT_SECRET_HERE
-spring.security.oauth2.client.registration.google.scope=openid,profile,email
-
-# External API Keys
-# Replace with your own keys from Google Cloud & AI Studio
-google.search.api.key=YOUR_GOOGLE_API_KEY_HERE
-google.search.engine.id=YOUR_SEARCH_ENGINE_ID_HERE
-gemini.api.key=YOUR_GEMINI_API_KEY_HERE
-
-# Database Connection (MySQL)
-# Replace 'your_mysql_password' with your MySQL root password (or leave blank if none).
-spring.datasource.url=jdbc:mysql://localhost:3306/ai_search?createDatabaseIfNotExist=true
-spring.datasource.username=root
-spring.datasource.password=your_mysql_password
-
-# JPA and Hibernate Properties
-# 'update' will automatically create and update tables based on your @Entity classes.
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
-spring.jpa.show-sql=true
-
-Build and Run the Application:
-
-Open a terminal in the project's root directory.
-
-Run the application using the Gradle wrapper:
-
-./gradlew bootRun
-
-The application will start, and the necessary database tables will be created automatically. You can access it at http://localhost:8080.
-
-<p align="center">
-Made with ❤️ by h7
-</p>
+<div align="center">
+  Made with ❤️ by h7
+</div>
