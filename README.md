@@ -1,8 +1,12 @@
-<div align="center">
+<p align="center">
+<strong>
+<font size="6">Synapse Search 🧠✨</font>
+</strong>
+</p>
 
-Synapse Search 🧠✨
-Search Smarter, Not Harder. Your Intelligent Gateway to the Web's Knowledge.
-</div>
+<p align="center">
+<strong>Search Smarter, Not Harder. Your Intelligent Gateway to the Web's Knowledge.</strong>
+</p>
 
 Welcome to Synapse Search! This isn't just another search engine. It's a smart research assistant I built to cut through the noise of the internet. Instead of giving you a list of links to dig through, Synapse Search reads them for you and provides a clear, comprehensive summary powered by Google's Gemini AI.
 
@@ -113,7 +117,7 @@ gemini.api.key=YOUR_GEMINI_API_KEY_HERE
 
 # Database Connection (MySQL)
 # Replace 'your_mysql_password' with your MySQL root password (or leave blank if none).
-spring.datasource.url=jdbc:mysql://localhost:3006/ai_search?createDatabaseIfNotExist=true
+spring.datasource.url=jdbc:mysql://localhost:3306/ai_search?createDatabaseIfNotExist=true
 spring.datasource.username=root
 spring.datasource.password=your_mysql_password
 
@@ -133,8 +137,6 @@ Run the application using the Gradle wrapper:
 
 The application will start, and the necessary database tables will be created automatically. You can access it at http://localhost:8080.
 
-<div align="center">
-
-A Project by h7
-
-</div>
+<p align="center">
+Made with ❤️ by h7
+</p>
