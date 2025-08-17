@@ -73,7 +73,7 @@ MySQL Server (e.g., via XAMPP, WAMP, or standalone installation)
 Installation & Setup
 Clone the repository:
 
-git clone https://github.com/your-username/ai-search-app.git
+git clone https://github.com/venushathi/ai-search-app.git
 cd ai-search-app
 
 Database Setup:
@@ -113,7 +113,7 @@ gemini.api.key=YOUR_GEMINI_API_KEY_HERE
 
 # Database Connection (MySQL)
 # Replace 'your_mysql_password' with your MySQL root password (or leave blank if none).
-spring.datasource.url=jdbc:mysql://localhost:3306/ai_search?createDatabaseIfNotExist=true
+spring.datasource.url=jdbc:mysql://localhost:3006/ai_search?createDatabaseIfNotExist=true
 spring.datasource.username=root
 spring.datasource.password=your_mysql_password
 
